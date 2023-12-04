@@ -82,3 +82,29 @@ let orders = [
 ];
 
 // Start coding here
+
+// Exercise #3: Find the Paid Amount of "Birdie Shepland"
+
+// ให้ใช้ For Loop ในการหาผลรวมของมูลค่าคำสั่งซื้อทั้งหมดของ "Birdie Shepland"
+// ผลลัพธ์ที่แสดงออกทางหน้าจอจะเป็นแบบนี้
+
+// Copy
+// Total paid amount of Birdie Shepland: 379,925 Baht
+
+// คำใบ้ 🕵🏼‍♀️
+
+// ข้อนี้จะมีเงื่อนไขเพิ่มเข้ามาเหมือนกับ Exercise #2 ว่า ให้หายอดรวมของคำสั่งซื้อเฉพาะของ Birdie Shepland
+// จำได้ไหมว่าเราสามารถใช้คอนเซ็ปต์อะไรในการสร้างเงื่อนไขให้กับโปรแกรม 🤓
+
+let totalBirdie = 0;
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].customerName === "Birdie Shepland") {
+    totalBirdie =
+      totalBirdie + orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+console.log(
+  "Total paid amount of Birdie Shepland: " +
+    totalBirdie.toLocaleString() +
+    " Baht"
+);
